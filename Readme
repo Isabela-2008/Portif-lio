@@ -1,0 +1,20 @@
+Nome: Meu Portfólio Descrição: Este é um portfólio web desenvolvido por Isabela Ribeiro Portillo, contendo informações sobre projetos, contato e um chatbot interativo. Objetivo: Demonstrar habilidades em HTML, CSS e JavaScript, apresentando um design moderno e harmonioso.
+Meu Portfólio
+
+🌸 Sobre o Projeto
+Este é um portfólio interativo desenvolvido por **Isabela Ribeiro Portillo** para exibir seus projetos, habilidades e informações de contato. Ele inclui um **chat assistente**, estilização moderna e uma paleta de cores lilás harmoniosa.
+
+🚀 Tecnologias Utilizadas
+- HTML5 📜
+- CSS3 (Baloo 2 para um toque arredondado) 🎨
+- JavaScript (Chatbot interativo) ⚡
+
+📌 Funcionalidades
+- 🎭 Apresentação pessoal e dos projetos
+- 💬 Chat assistente para responder perguntas básicas
+- 🎨 Design clean e sofisticado com bordas arredondadas e animações sutis
+
+💜 Como Visualizar o Projeto?
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/meu-portfólio.git
