@@ -1,0 +1,24 @@
+.gitignore (`.gitignore`)
+Este arquivo impede que arquivos desnecessários sejam versionados no Git.
+
+gitignore
+ Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+ Node.js e pacotes
+node_modules/
+package-lock.json
+
+ IDEs e editores
+.vscode/
+.idea/
+.log
+
+ Cache do navegador
+.cache
+.tmp
+
+Arquivos gerados automaticamente
+dist/
+build/
