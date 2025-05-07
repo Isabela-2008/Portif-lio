@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="4style.css">
+</head>
+<body>
+    <header>
+        <h1>Meu Portfólio</h1>
+        <h3>Isabela Ribeiro Portillo</h3>
+    </header>
+    
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p class="destaque">Sou uma jovem interessada em desenvolvimento de software que busca trabalhar com HTML, CSS e JavaScript.</p>
+    </section>
+  
+    <section id="projetos">
+        <h2>Projetos</h2>
+        <div class="card">
+            <h3>Projeto 1</h3>
+            <a href="https://candy-coherent-emoji.glitch.me/" target="_blank">Projeto Lista de Compras</a>
+        </div>
+        <div class="card">
+            <h3>Projeto 2</h3>
+            <a href="https://decisive-calm-aphid.glitch.me/" target="_blank">Projeto de Gerenciador de Tarefas</a>
+        </div>
+    </section>
+    
+    <section id="contato">
+        <h2>Contato</h2>
+        <form>
+            <input type="text" placeholder="Seu nome">
+            <input type="email" placeholder="Seu e-mail">
+            <textarea placeholder="Escreva sua mensagem"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Chat Assistente -->
+    <div id="chat-container">
+        <h3>Chat Assistente</h3>
+        <div id="chatBox"></div>
+        <input type="text" id="chatInput" placeholder="Digite sua mensagem..." />
+        <button id="sendMessage">Enviar</button>
+    </div>
+
+    <footer>
+        <p>© 2025 Portillo - 
+            <p>
+                <a href="https://www.instagram.com/p0rtillo.zzz?igsh=MTEwYWo4dzF6N2kwZQ==">Meu perfil no Instagram</a> |
+                <a href="https://github.com/dashboard">GitHub</a> |
+                <a href="mailto:portillodeve.sistem@gmail.com">Email</a>
+              </p>
+              
+    <script src="bot.js"></script> <!-- Certifique-se que o nome está correto! -->
+</body>
+</html>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
+:root {
+    --cor-fundo: #b535ff; /* Lavanda suave */
+    --cor-primaria: #c96cff; /* Rosa antigo */
+    --cor-secundaria: #dcc1ec; /* Blush delicado */
+    --cor-destaque: #c96cff; /* Marrom elegante */
+    --cor-texto: #ffffff; /* Marrom clássico */
+    --fonte-titulo: 'Baloo 2', serif;
+    --fonte-texto: 'Cormorant Garamond', serif;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    text-align: center;
+    padding: 30px;
+    font-family: var(--fonte-titulo);
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1,
+header h3 {
+    color: #FFFFFF; 
+}
+
+
+.card {
+    background-color: var(--cor-primaria);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.botao {
+    display: inline-block;
+    background-color: var(--cor-secundaria);
+    color: #FFFFFF;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-style: italic;
+}
+
+.botao:hover {
+    background-color: var(--cor-primaria);
+}
+
+h2 {
+    color: #FFFFFF;
+    font-family: var(--fonte-titulo);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-style: italic;
+}
+
+p {
+    color: var(--cor-texto);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Estilização do Chat */
+#chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 250px;
+    background-color: var(--cor-primaria);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-style: italic;
+}
+
+#chatBox {
+    min-height: 150px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--cor-texto);
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+    background: #c96cff; 
+    color: #FFFFFF; 
+}
+
+
+#chatInput {
+    width: 80%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid var(--cor-texto);
+    border-radius: 5px;
+    font-style: italic;
+}
+
+#sendMessage {
+    width: 18%;
+    padding: 8px;
+    background: var(--cor-secundaria);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-style: italic;
+}
+
+#sendMessage:hover {
+    background: var(--cor-primaria);
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const chatInput = document.getElementById("chatInput");
+    const chatBox = document.getElementById("chatBox");
+    const sendMessage = document.getElementById("sendMessage");
+
+    // Mensagem padrão no chat
+    chatBox.innerHTML = `<p class="mensagem-inicial"><strong>Assistente:</strong> Pergunte sobre projetos, contato ou sobre mim, vai ser um prazer te ajudar!</p>`;
+
+    function enviarMensagem() {
+        const userMessage = chatInput.value.trim();
+        if (userMessage === "") {
+            alert("Digite uma mensagem antes de enviar!");
+            return;
+        }
+
+        // Remove a mensagem inicial ao enviar a primeira mensagem
+        const mensagemInicial = document.querySelector(".mensagem-inicial");
+        if (mensagemInicial) {
+            mensagemInicial.remove();
+        }
+
+        chatBox.innerHTML += `<p><strong>Você:</strong> ${userMessage}</p>`;
+
+        let botResponse = "Desculpe, não entendi. Pergunte sobre projetos, contato ou sobre Isabela.";
+        
+        if (userMessage.toLowerCase().includes("projetos")) {
+            botResponse = "Tenho dois projetos em destaque! Confira na seção Projetos.";
+        } else if (userMessage.toLowerCase().includes("contato")) {
+            botResponse = "Você pode entrar em contato comigo pelos link que contém o meu email, GitHub e instagram no final da página.";
+        } else if (userMessage.toLowerCase().includes("sobre isabela")) {
+            botResponse = "Meu nome é Isabela Ribeiro Portillo, tenho 16 anos, estudo na escola Bela Vista. Neste ano de 2025 estou no segundo ano do ensino médio e faço um curso de Desenvolvimento de Sistemas no CEDUP JL. Estou interessada em seguir esta área e estou disposta a aprender o que for preciso para uma vaga ou estágio na sua empresa!";
+        }
+
+        chatBox.innerHTML += `<p><strong>Assistente:</strong> ${botResponse}</p>`;
+        chatInput.value = "";
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    sendMessage.addEventListener("click", function () {
+        console.log("Botão de enviar foi clicado!");
+        enviarMensagem();
+    });
+
+    chatInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            console.log("Enter pressionado!");
+            enviarMensagem();
+        }
+    });
+
+    console.log("Chatbot carregado corretamente!");
+});
